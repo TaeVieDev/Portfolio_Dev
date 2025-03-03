@@ -126,14 +126,14 @@ Ce portfolio reflète mon parcours et mon engagement à évoluer dans ce domaine
             </Card>
             <Card>
               <CardContent>
-                <h3 className="text-xl font-semibold">Projet 1</h3>
-                <p className="mt-2">Description rapide du projet avec techno utilisées.</p>
+                <h3 className="text-xl font-semibold">Projet 2</h3>
+                <p className="mt-2">à suivre</p>
               </CardContent>
             </Card>
             <Card>
               <CardContent>
-                <h3 className="text-xl font-semibold">Projet 2</h3>
-                <p className="mt-2">Description rapide du projet avec techno utilisées.</p>
+                <h3 className="text-xl font-semibold">Projet 3</h3>
+                <p className="mt-2">à suivre</p>
               </CardContent>
             </Card>
           </motion.div>
