@@ -6,14 +6,9 @@ import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
 import emailjs from 'emailjs-com';
 
 export default function Portfolio() {
-  const [showProjects, setShowProjects] = useState(false);
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(null);
-
-  const toggleProjects = () => {
-    setShowProjects(!showProjects);
-  };
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -37,7 +32,7 @@ export default function Portfolio() {
 
   return (
     <motion.div 
-      className="min-h-screen bg-gray-100 text-gray-900 p-6"
+      className="min-h-screen bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 text-gray-100 p-6"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -48,96 +43,104 @@ export default function Portfolio() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <h1 className="text-4xl font-bold">Montout Thomas - Mon Portfolio</h1>
-        <p className="text-lg mt-2">Développeur en recherche d'alternance</p>
+        <h1 className="text-4xl font-bold text-white">Montout Thomas - Mon Portfolio</h1>
+        <p className="text-2xl mt-2 text-gray-300">Développeur en recherche d'alternance</p>
         <div className="flex justify-center space-x-4 mt-4">
           <motion.a 
-            href="https://www.linkedin.com" 
+            href="www.linkedin.com/in/thomas-montout" 
             target="_blank" 
             rel="noopener noreferrer"
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.1, rotate: 10 }}
             whileTap={{ scale: 0.9 }}
           >
-            <FaLinkedin className="text-3xl text-blue-700" />
+            <FaLinkedin className="text-4xl text-blue-500" />
           </motion.a>
           <motion.a 
-            href="https://github.com" 
+            href="https://github.com/TaeVieDev" 
             target="_blank" 
             rel="noopener noreferrer"
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.1, rotate: 10 }}
             whileTap={{ scale: 0.9 }}
           >
-            <FaGithub className="text-3xl text-gray-800" />
+            <FaGithub className="text-4xl text-gray-300" />
           </motion.a>
           <motion.a 
             href="mailto:montoutthomas@gmail.com"
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.1, rotate: 10 }}
             whileTap={{ scale: 0.9 }}
           >
-            <FaEnvelope className="text-3xl text-red-600" />
+            <FaEnvelope className="text-4xl text-red-500" />
           </motion.a>
         </div>
       </motion.header>
 
       <motion.section 
-        className="text-center mb-10 bg-white p-6 rounded-lg shadow-lg"
-        initial={{ x: -50, opacity: 0 }}
+        className="text-center mb-10 bg-gray-800 p-6 rounded-lg shadow-lg bg-opacity-80"
+        initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-2xl font-semibold text-gray-800">À propos</h2>
-        <p className="mt-2 text-gray-600">Après plusieurs années à chercher ma voie, j'ai découvert le développement. Depuis moins d'un an, je me forme pour intégrer un BTS SIO SLAM en alternance. Résoudre des problèmes, apprendre chaque jour et explorer de nouvelles technologies me motivent au quotidien.
-
-Chaque défi est une opportunité d'acquérir de nouvelles compétences. Mon objectif est de devenir un développeur accompli, alliant rigueur, curiosité et persévérance.
-
-Ce portfolio reflète mon parcours et mon engagement à évoluer dans ce domaine passionnant.</p>
+        <h2 className="text-2xl font-semibold text-white">À propos</h2>
+        <p className="mt-2 text-gray-300">
+          Après plusieurs années dans l’éducation nationale, j'ai découvert le développement et ça a été une véritable révélation. Depuis un peu moins d'un an maintenant, je me forme avec passion dans le cadre d'une reprise d’étude en BTS SIO SLAM en alternance avec l'envie profonde de me construire un avenir dans ce domaine.
+        </p>
+        <p className="mt-2 text-gray-300">
+          Ce qui m'a fait tomber amoureux du code c’est la fusion parfaite entre <strong>« logique » et « création »</strong>. C'est la sensation unique que procure la résolution d'un problème après des heures de réflexion. Chaque bug, chaque défi est une opportunité d'apprendre et de progresser.
+        </p>
+        <p className="mt-2 text-gray-300">
+          Cette soif d'apprentissage me pousse chaque jour à aller plus loin, à explorer de nouvelles technologies et à me perfectionner. Je suis conscient que le chemin est long, mais déterminé à devenir un développeur accompli.
+        </p>
+        <p className="mt-2 text-gray-300">
+          Mon objectif est d'acquérir de solides compétences techniques, mais aussi de cultiver la <strong>rigueur</strong>, la <strong>curiosité</strong> et la <strong>persévérance</strong> qui font, selon moi, les meilleurs développeurs.
+        </p>
+        <p className="mt-2 text-gray-300">
+          Ce portfolio est à la fois le reflet de mon apprentissage et la preuve de mon engagement à évoluer dans ce métier qui me passionne.
+        </p>
       </motion.section>
 
       <motion.section 
-        className="text-center mb-10 bg-white p-6 rounded-lg shadow-lg"
+        className="text-center mb-10 bg-gray-800 p-6 rounded-lg shadow-lg bg-opacity-80"
         initial={{ x: 50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-2xl font-semibold text-gray-800">Projets</h2>
-        <Button onClick={toggleProjects} className="mt-4">
-          {showProjects ? 'Masquer' : 'Voir'} les projets
-        </Button>
-        {showProjects && (
+        <h2 className="text-2xl font-semibold text-white">Projets</h2>
+        <motion.div 
+          className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
           <motion.div 
-            className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
+            className="bg-gray-700 text-gray-300 p-4 rounded-lg shadow-lg"
+            whileHover={{ scale: 1.05 }}
           >
-            <Card>
-              <CardContent>
-                <h3 className="text-xl font-semibold">Portfolio</h3>
-                <p className="mt-2">Ce projet est mon portfolio personnel, développé avec React. Il présente mes compétences, mes projets et permet de me contacter facilement.</p>
-                <p className="mt-2 font-semibold">Technologies utilisées :</p>
-                <ul className="list-disc list-inside mt-2 text-left">
-                  <li>React</li>
-                  <li>Framer Motion</li>
-                  <li>EmailJS</li>
-                  <li>React Icons</li>
-                  <li>Tailwind CSS</li>
-                </ul>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent>
-                <h3 className="text-xl font-semibold">Projet 2</h3>
-                <p className="mt-2">à suivre</p>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent>
-                <h3 className="text-xl font-semibold">Projet 3</h3>
-                <p className="mt-2">à suivre</p>
-              </CardContent>
-            </Card>
+            <h3 className="text-xl font-semibold text-white">Portfolio</h3>
+            <p className="mt-2 text-gray-300">Ce projet est mon portfolio personnel, développé avec React. Il présente mes compétences, mes projets et permet de me contacter facilement.</p>
+            <p className="mt-2 font-semibold text-gray-300">Technologies utilisées :</p>
+            <ul className="list-disc list-inside mt-2 text-left text-gray-300">
+              <li>React</li>
+              <li>Framer Motion</li>
+              <li>EmailJS</li>
+              <li>React Icons</li>
+              <li>Tailwind CSS</li>
+            </ul>
           </motion.div>
-        )}
+          <motion.div 
+            className="bg-gray-700 text-gray-300 p-4 rounded-lg shadow-lg"
+            whileHover={{ scale: 1.05 }}
+          >
+            <h3 className="text-xl font-semibold text-white">Projet 2</h3>
+            <p className="mt-2 text-gray-300">à suivre</p>
+          </motion.div>
+          <motion.div 
+            className="bg-gray-700 text-gray-300 p-4 rounded-lg shadow-lg"
+            whileHover={{ scale: 1.05 }}
+          >
+            <h3 className="text-xl font-semibold text-white">Projet 3</h3>
+            <p className="mt-2 text-gray-300">à suivre</p>
+          </motion.div>
+        </motion.div>
       </motion.section>
 
       <motion.section 
@@ -146,13 +149,13 @@ Ce portfolio reflète mon parcours et mon engagement à évoluer dans ce domaine
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className="text-2xl font-semibold">Contact</h2>
+        <h2 className="text-2xl font-semibold text-white">Contact</h2>
         <form onSubmit={handleSubmit} className="mt-4 space-y-4 max-w-md mx-auto">
           <input
             type="text"
             name="name"
             placeholder="Nom"
-            className="w-full p-2 border rounded-lg"
+            className="w-full p-2 border rounded-lg bg-gray-700 text-white border-gray-600"
             value={form.name}
             onChange={handleChange}
             required
@@ -161,7 +164,7 @@ Ce portfolio reflète mon parcours et mon engagement à évoluer dans ce domaine
             type="email"
             name="email"
             placeholder="Email"
-            className="w-full p-2 border rounded-lg"
+            className="w-full p-2 border rounded-lg bg-gray-700 text-white border-gray-600"
             value={form.email}
             onChange={handleChange}
             required
@@ -169,7 +172,7 @@ Ce portfolio reflète mon parcours et mon engagement à évoluer dans ce domaine
           <textarea
             name="message"
             placeholder="Message"
-            className="w-full p-2 border rounded-lg"
+            className="w-full p-2 border rounded-lg bg-gray-700 text-white border-gray-600"
             value={form.message}
             onChange={handleChange}
             required
