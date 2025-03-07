@@ -85,7 +85,7 @@ export default function Portfolio() {
           Après plusieurs années dans l’éducation nationale, j'ai découvert le développement et ça a été une véritable révélation. Depuis un peu moins d'un an maintenant, je me forme avec passion dans le cadre d'une reprise d’étude en BTS SIO SLAM en alternance avec l'envie profonde de me construire un avenir dans ce domaine.
         </p>
         <p className="mt-2 text-gray-300 sm:text-base">
-          Ce qui m'a fait tomber amoureux du code c’est la fusion parfaite entre <strong>« logique » et « création »</strong>. C'est la sensation unique que procure la résolution d'un problème après des heures de réflexion. Chaque bug, chaque défi est une opportunité d'apprendre et de progresser.
+          Ce qui m'a fait tomber amoureux du code c’est quand j'ai compris que c'était la fusion parfaite entre <strong>« logique » et « création »</strong>. C'est la sensation unique que procure la résolution d'un problème après des heures de réflexion. Chaque bug, chaque défi est une opportunité d'apprendre et de progresser.
         </p>
         <p className="mt-2 text-gray-300 sm:text-base">
           Cette soif d'apprentissage me pousse chaque jour à aller plus loin, à explorer de nouvelles technologies et à me perfectionner. Je suis conscient que le chemin est long, mais déterminé à devenir un développeur accompli.
