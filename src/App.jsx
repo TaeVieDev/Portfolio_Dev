@@ -82,13 +82,13 @@ export default function Portfolio() {
       >
         <h2 className="text-2xl font-semibold text-white sm:text-xl">À propos</h2>
         <p className="mt-2 text-gray-300 sm:text-base">
-        Après plusieurs années dans l'Éducation Nationale, j'ai découvert le développement web — une véritable révélation. Depuis moins d'un an, je me forme avec passion dans le cadre d'une reprise d'études en <strong>BTS SIO option SLAM</strong> en alternance, avec l'envie profonde de bâtir mon avenir dans ce domaine.
+        Après plusieurs années dans l'Éducation Nationale, j'ai découvert le développement web et celà a été une véritable révélation. Depuis moins d'un an, je me forme avec passion dans le cadre d'une reprise d'études en <strong>BTS SIO option SLAM</strong> en alternance, avec l'envie profonde de bâtir mon avenir dans ce domaine.
         </p>
         <p className="mt-2 text-gray-300 sm:text-base">
-        Ce qui m'a fait tomber amoureux du code, c'est cette fusion parfaite entre <strong>logique</strong> et <strong>création</strong>. La sensation unique que procure la résolution d'un problème après des heures de réflexion est ce qui me pousse à toujours aller plus loin. Chaque bug, chaque défi est une opportunité d'apprendre et de progresser.
+        Ce qui m'a fait tomber amoureux du code, c'est cette fusion parfaite entre <strong>logique</strong> et <strong>création</strong>. La sensation unique que procure la résolution d'un problème après des heures de réflexion. Chaque bug, chaque défi est une opportunité d'apprendre et de progresser.
         </p>
         <p className="mt-2 text-gray-300 sm:text-base">
-        Cette soif d'apprentissage me guide au quotidien. J'explore de nouvelles technologies avec l'objectif de développer des applications qui allient <strong>rigueur technique</strong> et <strong>expérience utilisateur</strong>. 
+        J'explore et j'apprend a maitriser de nouvelles technologies avec l'objectif de développer des applications qui allient <strong>rigueur technique</strong> et <strong>expérience utilisateur</strong>. 
         </p>
         <p className="mt-2 text-gray-300 sm:text-base">
         Je ferais tout pour devenir un développeur accompli et atteindre mon objectif, étre Développeur Fullstack. Ce portfolio est à la fois le reflet de mon apprentissage et l'engagement que je prends pour évoluer chaque jour dans ce métier qui me passionne.
